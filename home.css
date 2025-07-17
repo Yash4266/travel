@@ -19,12 +19,41 @@
 
 .carousel-img {
   height: 750px; /* or any desired height */
-  object-fit: cover; /* maintains aspect ratio, fills container */
+  width: 100%;
+  object-fit: contain; /* maintains aspect ratio, fills container */
+}
+
+.carousel-item{
+  margin-top: -89px;
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 20%;
+  left: 10%;
+  right: 10%;
+  text-align: left;
+  background: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 113px;
+}
+
+.carousel-caption h3 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.carousel-caption p {
+  font-size: 1.2rem;
+  margin-top: 10px;
 }
 
 a:hover{
       color: pink;
 }
+
 .packages-section {
       padding: 40px;
       text-align: center;
@@ -201,6 +230,17 @@ a:hover{
     .contact-form button:hover {
       background-color: #c2185b;
     }
+    @media (max-width: 769px) {
+      .carousel-img{
+        width: 250px;
+      }
+      .carousel-item{
+        margin-top: -157px;
+      }
+      .carousel-caption{
+        margin-bottom: 165px;
+      }
+    }
 
     @media (max-width: 600px) {
       .contact-section {
@@ -209,7 +249,7 @@ a:hover{
     }
     .footer {
       background-color:rgba(154, 61, 61, 0.3);
-      color: #eee;
+      color: #000000;
       padding: 40px 20px;
       text-align: center;
     }
@@ -315,8 +355,26 @@ a:hover{
   .modal-content {
     border-radius: 0.5rem;
   }
-
+  
   .modal-title {
     font-size: 1.25rem;
   }
 }
+@media (max-width: 426px) {
+  #carouselExampleIndicators {
+    height: 40vh;
+  }
+  .carousel-item{
+        margin-top: -253px;
+      }
+      .carousel-caption{
+        margin-bottom: 250px;
+      }
+      .carousel-caption p{
+        font-size: smaller;
+      }
+      .carousel-caption h3{
+        font-size: small;
+      }
+    }
+
